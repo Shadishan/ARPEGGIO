@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stroke Trial Eligibility</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; background: #f5faff; color: #333; }
+    h1, h2 { color: #00557f; }
+    .logo-bar { display: flex; justify-content: space-around; align-items: center; margin-bottom: 30px; }
+    .logo-bar img { height: 60px; }
+    .section { margin-bottom: 25px; }
+    label { display: block; margin-bottom: 10px; }
+    .radio-group { margin-bottom: 10px; }
+    .radio-group label { display: inline-block; margin-right: 15px; }
+    button { padding: 10px 15px; margin: 5px; background-color: #00557f; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    #results { margin-top: 30px; padding: 15px; border: 1px solid #ccc; background: #fff; }
+    #timestamp { margin-top: 10px; font-size: 0.9em; color: #555; }
+    #backButton { display: none; margin-top: 20px; }
+    .met, .not-met { margin-left: 10px; font-weight: bold; }
+    .met { color: green; }
+    .not-met { color: red; }
+    @media print {
+      body { background: white; color: black; font-size: 12px; margin: 20mm; }
+      .logo-bar, form button, #backButton { display: none; }
+      header, footer { display: block; text-align: center; font-size: 0.9em; margin: 5px 0; }
+    }
+    header, footer { display: none; }
+  </style>
+</head>
+<body>
+<header>Confidential - Study Screening Tool</header>
+<div class="logo-bar">
+  <img src="images/logo1.png" alt="Logo 1">
+  <img src="images/logo2.png" alt="Logo 2">
+</div>
+<h1>ARPEGGIO Stroke Trial Eligibility Checklist</h1>
+<form id="eligibilityForm">
+  <div class="section">
+    <h2>Inclusion Criteria</h2>
+<div class="radio-group"><label>1. Age ≥ 18 years. <input type="radio" name="inclusion1" value="yes"> Yes <input type="radio" value="no" name="inclusion1"> No</label></div><div class="radio-group"><label>2. Body weight < 150 kg. <input type="radio" name="inclusion2" value="yes"> Yes <input type="radio" value="no" name="inclusion2"> No</label></div><div class="radio-group"><label>3. AIS intended for immediate endovascular treatment. <input type="radio" name="inclusion3" value="yes"> Yes <input type="radio" value="no" name="inclusion3"> No</label></div><div class="radio-group"><label>4. Disabling stroke defined as a baseline NIHSS ≥ 6 at the time of randomization. <input type="radio" name="inclusion4" value="yes"> Yes <input type="radio" value="no" name="inclusion4"> No</label></div><div class="radio-group"><label>5. Confirmed symptomatic intracranial occlusion at intracranial carotid artery, M1 or M2 segment. <input type="radio" name="inclusion5" value="yes"> Yes <input type="radio" value="no" name="inclusion5"> No</label></div><div class="radio-group"><label>6. Onset of AIS to randomization ≤ 24 hours. <input type="radio" name="inclusion6" value="yes"> Yes <input type="radio" value="no" name="inclusion6"> No</label></div><div class="radio-group"><label>7. Intended endovascular treatment with an approved endovascular device. <input type="radio" name="inclusion7" value="yes"> Yes <input type="radio" value="no" name="inclusion7"> No</label></div><div class="radio-group"><label>8. Pre-AIS mRS 0–2 and living independently (no nursing care). <input type="radio" name="inclusion8" value="yes"> Yes <input type="radio" value="no" name="inclusion8"> No</label></div><div class="radio-group"><label>9. Treating team and family committed to full medical support. <input type="radio" name="inclusion9" value="yes"> Yes <input type="radio" value="no" name="inclusion9"> No</label></div><div class="radio-group"><label>10. Signed informed consent from subject or LAR (electronic consent permitted where allowed). <input type="radio" name="inclusion10" value="yes"> Yes <input type="radio" value="no" name="inclusion10"> No</label></div><div class="radio-group"><label>11. Biologically female subject: meets surgical sterility, menopause, or birth control standards. <input type="radio" name="inclusion11" value="yes"> Yes <input type="radio" value="no" name="inclusion11"> No</label></div><div class="radio-group"><label>12. Male subject: sterile or agrees to acceptable birth control or abstinence. <input type="radio" name="inclusion12" value="yes"> Yes <input type="radio" value="no" name="inclusion12"> No</label></div>
+  </div>
+  <div class="section">
+    <h2>Exclusion Criteria</h2>
+<div class="radio-group"><label>1. Evidence of acute intracerebral hemorrhage on qualifying imaging. <input type="radio" name="exclusion1" value="yes"> Yes <input type="radio" value="no" name="exclusion1"> No</label></div><div class="radio-group"><label>2. Poor or no collateral circulation in opinion of investigator. <input type="radio" name="exclusion2" value="yes"> Yes <input type="radio" value="no" name="exclusion2"> No</label></div><div class="radio-group"><label>3. ASPECT score 0–4. <input type="radio" name="exclusion3" value="yes"> Yes <input type="radio" value="no" name="exclusion3"> No</label></div><div class="radio-group"><label>4. Received IV thrombolysis within the prior 24 hours. <input type="radio" name="exclusion4" value="yes"> Yes <input type="radio" value="no" name="exclusion4"> No</label></div><div class="radio-group"><label>5. Intent to use any non-FDA-approved endovascular device. <input type="radio" name="exclusion5" value="yes"> Yes <input type="radio" value="no" name="exclusion5"> No</label></div><div class="radio-group"><label>6. Planned use of intra-arterial thrombolytic therapy. <input type="radio" name="exclusion6" value="yes"> Yes <input type="radio" value="no" name="exclusion6"> No</label></div><div class="radio-group"><label>7. Known severe contrast allergy or contraindication to iodinated contrast. <input type="radio" name="exclusion7" value="yes"> Yes <input type="radio" value="no" name="exclusion7"> No</label></div><div class="radio-group"><label>8. Suspected chronic occlusion or dissection suggesting lack of success with EVT. <input type="radio" name="exclusion8" value="yes"> Yes <input type="radio" value="no" name="exclusion8"> No</label></div><div class="radio-group"><label>9. Known arterial condition preventing device use (e.g., aortic dissection, carotid stent). <input type="radio" name="exclusion9" value="yes"> Yes <input type="radio" value="no" name="exclusion9"> No</label></div><div class="radio-group"><label>10. End-stage kidney disease. <input type="radio" name="exclusion10" value="yes"> Yes <input type="radio" value="no" name="exclusion10"> No</label></div><div class="radio-group"><label>11. Cohort-specific anticoagulant exclusion criteria not met (see protocol). <input type="radio" name="exclusion11" value="yes"> Yes <input type="radio" value="no" name="exclusion11"> No</label></div><div class="radio-group"><label>12. Known metastatic malignancy with poor prognosis. <input type="radio" name="exclusion12" value="yes"> Yes <input type="radio" value="no" name="exclusion12"> No</label></div><div class="radio-group"><label>13. Comorbidities that preclude neurological assessment or follow-up. <input type="radio" name="exclusion13" value="yes"> Yes <input type="radio" value="no" name="exclusion13"> No</label></div><div class="radio-group"><label>14. Participation in another clinical trial within 30 days. <input type="radio" name="exclusion14" value="yes"> Yes <input type="radio" value="no" name="exclusion14"> No</label></div><div class="radio-group"><label>15. Previous participation in SCP-CL-0001/2/3 trials with investigational drug exposure. <input type="radio" name="exclusion15" value="yes"> Yes <input type="radio" value="no" name="exclusion15"> No</label></div><div class="radio-group"><label>16. Moderate/severe hypotension or SBP < 90 mmHg requiring intervention. <input type="radio" name="exclusion16" value="yes"> Yes <input type="radio" value="no" name="exclusion16"> No</label></div>
+  </div>
+  <button type="button" onclick="checkEligibility()">Check Eligibility</button>
+  <button type="button" onclick="printResults()">Print Results</button>
+  <button type="button" onclick="downloadPDF()">Download as PDF</button>
+</form>
+<div id="results"></div>
+<div id="timestamp"></div>
+<button id="backButton" onclick="restoreForm()">Back to Form</button>
+<footer>Confidential - Generated for Internal Use Only</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+function checkEligibility() {
+  const form = document.forms["eligibilityForm"];
+  let inclusionMet = true;
+  let exclusionViolated = false;
+  let resultHtml = '<h2>Eligibility Result</h2><ul>';
+
+  for (let i = 1; i <= 12; i++) {
+    const val = form[`inclusion${i}`]?.value;
+    resultHtml += `<li>Inclusion ${i}: ${val === 'yes' ? '<span class="met">Met</span>' : '<span class="not-met">Not Met</span>'}`;
+    if (val !== 'yes') inclusionMet = false;
+  }
+  for (let i = 1; i <= 16; i++) {
+    const val = form[`exclusion${i}`]?.value;
+    resultHtml += `<li>Exclusion ${i}: ${val === 'no' ? '<span class="met">Not Present</span>' : '<span class="not-met">Present</span>'}`;
+    if (val === 'yes') exclusionViolated = true;
+  }
+
+  resultHtml += '</ul>';
+  resultHtml += `<h3>${inclusionMet && !exclusionViolated ? '<span style="color:green">Eligible for Study</span>' : '<span style="color:red">Not Eligible for Study</span>'}</h3>`;
+  document.getElementById("results").innerHTML = resultHtml;
+
+  const now = new Date();
+  const timestamp = now.toLocaleString();
+  document.getElementById("timestamp").innerText = `Results generated on: ${timestamp}`;
+}
+
+function printResults() {
+  window.print();
+}
+
+async function downloadPDF() {
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF();
+  const header = "Confidential - Study Screening Tool";
+  const footer = "Confidential - Generated for Internal Use Only";
+  const resultsText = document.getElementById("results").innerText;
+  const timestampText = document.getElementById("timestamp").innerText;
+  doc.text(header, 105, 10, { align: "center" });
+  const lines = doc.splitTextToSize(resultsText + "\n\n" + timestampText, 180);
+  doc.text(lines, 10, 20);
+  doc.text(footer, 105, 280, { align: "center" });
+
+  const now = new Date();
+  const dateString = now.toISOString().slice(0, 10);
+  const timeString = now.toTimeString().slice(0,5).replace(":", "");
+  const filename = `eligibility_${dateString}_${timeString}.pdf`;
+  doc.save(filename);
+}
+
+function restoreForm() {
+  location.reload();
+}
+</script>
+</body>
+</html>
